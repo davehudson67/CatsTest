@@ -1,0 +1,567 @@
+/* Navbar tab styling (navbarPage tabs) */
+.navbar-nav {
+  display: flex;
+  justify-content: space-between; /* Distribute tabs evenly */
+  width: 100%;
+  margin: 0; /* Remove margin between the tabs */
+  padding: 0; /* Remove padding between the tabs */
+  border: none !important; /* Remove borders around tabs */
+  border-bottom: none !important; /* Ensure no border between the tab and navbar */
+}
+
+/* Make each tab take up equal width */
+.navbar-nav > li {
+  flex-grow: 1; /* Ensures each tab takes up equal space */
+  margin: 0; /* Remove any margins between the list items */
+  padding: 0; /* Remove any padding between the list items */
+  border: none; /* Ensure no borders between the items */
+  border-bottom: none !important; /* Ensure no bottom border for list items */
+}
+
+/* Style the tab links */
+.navbar-nav > li > a {
+  background-color: #c928b2 !important; /* Tab background color */
+  color: #FAE6FA !important; /* Tab text color */
+  font-family: 'CatsHeadline', sans-serif; /* Use CatsHeadline font */
+  font-size: 18px; /* Adjust font size if needed */
+  font-weight: normal; /* Ensure consistent weight */
+  text-transform: none;
+  padding: 0 15px; /* Horizontal padding */
+  text-align: center;
+  height: 50px; /* Set fixed height */
+  line-height: 50px; /* Vertically center the text */
+  display: inline-block;
+  border: none; /* Remove borders to avoid black strip */
+  box-sizing: border-box;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  width: 100%; /* Make the link fill the entire tab area */
+  vertical-align: middle; /* Vertically align text */
+  margin: 0; /* Remove any margins between the anchor tags */
+  border-bottom: none !important; /* Ensure no bottom border on links */
+  box-shadow: none !important; /* Remove any shadow effect */
+  outline: none !important; /* Remove any outlines (focus/hover) */
+}
+
+/* Hover effect for the tabs */
+.navbar-nav > li > a:hover {
+  background-color: #FAE6FA !important; /* Hover color for the tab */
+  color: #7A1B72 !important; /* Text color on hover */
+  border: none !important; /* Remove any borders */
+  box-shadow: none !important; /* Remove any box-shadow */
+  outline: none !important; /* Remove any outline */
+  line-height: 50px; /* Ensure vertical alignment remains consistent */
+  margin: 0; /* Ensure no gap between tabs */
+  border-bottom: none !important; /* Remove bottom border on hover */
+}
+
+/* Active tab styling - target using aria-selected */
+.navbar-nav > li > a[aria-selected="true"] {
+  background-color: #FAE6FA !important; /* Active tab background color */
+  color: #7A1B72 !important; /* Active tab text color */
+  border: none !important; /* Remove any border */
+  box-shadow: none !important; /* Ensure no shadow on active tab */
+  margin: 0; /* Ensure no gap between active and other tabs */
+  border-bottom: none !important; /* Remove bottom border for active tabs */
+  outline: none !important; /* Remove any outline on active tabs */
+}
+
+/* Additional rules to override any other default styling */
+
+/* Remove any browser focus outline */
+.navbar-nav > li > a:focus {
+  outline: none !important; /* Remove focus outline */
+}
+
+/* Remove any default Bootstrap border or box-shadow on the navbar */
+.navbar {
+  margin-bottom: 0 !important; /* Remove any bottom margin from the navbar */
+  border: none !important; /* Ensure no borders on navbar */
+  box-shadow: none !important; /* Remove any shadow on navbar */
+}
+
+/* Remove any border-collapse or unwanted borders from the entire nav area */
+.navbar-collapse,
+.navbar-nav {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Style for the content box inside each tab */
+.page-content-box {
+  font-family:'NaNMetrify', sans-serif;
+  font-weight: normal;
+  font-size: 14px; /* Adjust font size if needed */
+  font-weight: normal; /* Ensure consistent weight */
+  background-color: #f9f9f9;
+  padding-left: 80px; /* Padding inside the box */
+  padding-right: 80px; /* Padding inside the box */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px; /* Space outside the box */
+}
+
+/* Remove padding and margin from header */
+.navbar-header {
+  width: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.container-fluid {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Style for the button container */
+.button-container {
+  display: flex;
+  justify-content: space-evenly; /* Space buttons equally across the page */
+  flex-wrap: wrap; /* Wrap buttons if the screen is too narrow */
+  margin-top: 20px;
+}
+
+/* Style for the buttons */
+.custom-button {
+  background-color: #c928b2; /* Custom background color */
+  color: #FAE6FA; /* Custom text color */
+  font-family:'CatsHeadline', sans-serif;
+  font-weight: normal;
+  padding: 10px 20px; /* Padding inside the button */
+  text-align: center;
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+  margin: 10px; /* Space between buttons */
+}
+
+/* Hover effect */
+.custom-button:hover {
+  background-color: #FAE6FA; /* Darker color on hover */
+  color: #7A1B72; /* Keep the text color */
+}
+
+/* Style for the secondary box at the bottom of the page */
+.secondary-box {
+  background-color: #f0f0f0; /* Light grey background */
+  padding: 10px; /* Add some padding inside the box */
+  margin: 20px;
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Custom value box styling */
+.custom-value-box-owned {
+  background-color: #7A1B72;
+  color: #FAE6FA;
+  padding: 2px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-value-box-shelter {
+  background-color: #C928B2;
+  color: #FAE6FA;
+  padding: 2px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-value-box-stray {
+  background-color: #7E3BE7;
+  color: #FAE6FA;
+  padding: 2px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-value-box-feral {
+  background-color: #1A006B;
+  color: #FAE6FA;
+  padding: 2px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-button {
+  position: fixed !important;
+  bottom: 40px !important;
+  right: 40px !important;
+  z-index: 9999 !important;
+}
+
+.feedback-button a {
+  display: inline-block;
+  width: 100px;  /* Increased width for a larger circle */
+  height: 100px; /* Increased height for a larger circle */
+  background-color: #7E3BE7;
+  color: #FAE6FA;
+  font-family:'NaNMetrify', sans-serif;
+  font-weight: normal;
+  text-decoration: none;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 12px; /* Adjust font size as needed */
+  text-align: center;
+  padding: 10px; /* Add padding to create space around text */
+  line-height: normal; /* Allow multi-line text */
+  white-space: normal; /* Enable text wrapping */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Center text within the circle */
+}
+
+.feedback-button a:hover {
+  background-color: #FAE6FA; /* Darker color on hover */
+  color: #7A1B72; /* Keep the text color */
+}
+
+.button-column .stacked-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px; /* Space between buttons */
+  background-color: #c928b2;
+  color: #FAE6FA;
+  font-family:'CatsHeadline', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.button-column .stacked-button:hover {
+  background-color: #FAE6FA;
+  color: #7A1B72;
+}
+
+.padded-table {
+  padding: 10px; /* Adjust the padding as needed */
+  margin-top: 15px; /* Optional: adds space above the table */
+  border-radius: 5px; /* Optional: rounds the corners */
+  background-color: #f9f9f9; /* Optional: adds a light background */
+  font-family:'NaNMetrify', sans-serif;
+  font-weight: normal;
+  color: #2c3e50;
+}
+
+.button-wrapper {
+  margin: 5px 0; /* Adjust spacing as needed */
+}
+
+.badge-container img {
+  
+  display: block !important;
+}
+
+/* Define CatsHeadline-Regular font */
+@font-face {
+  font-family: 'CatsHeadline';
+  src: url('CatsHeadline-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Define NaNMetrify fonts */
+@font-face {
+  font-family: 'NaNMetrify';
+  src: url('NaNMetrifyCStd-Bld.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NaNMetrify';
+  src: url('NaNMetrifyCStd-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'NaNMetrify';
+  src: url('NaNMetrifyCStd-Reg.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NaNMetrify';
+  src: url('NaNMetrifyCStd-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Apply CatsHeadline font to h2 headers */
+.cats-h2 {
+  font-family: 'CatsHeadline', sans-serif; /* Use CatsHeadline */
+  font-size: 20px; /* Optional: Adjust font size */
+  font-weight: normal; /* Optional: Adjust font weight */
+  color: #2c3e50;
+}
+
+.cats-h3 {
+  font-family: 'CatsHeadline', sans-serif; /* Use CatsHeadline */
+  font-size: 18px; /* Optional: Adjust font size */
+  font-weight: normal; /* Optional: Adjust font weight */
+  color: #2c3e50;
+}
+
+.cats-h4 {
+  font-family: 'CatsHeadline', sans-serif; /* Use CatsHeadline */
+  font-size: 14px; /* Optional: Adjust font size */
+  font-weight: normal; /* Optional: Adjust font weight */
+  color: #FAE6FA;
+}
+
+/* Apply NaNMetrify Regular to h3 headers */
+.cats-reg {
+  font-family: 'NaNMetrify', sans-serif; /* Use NaNMetrify */
+  font-size: 14px; /* Adjust font size */
+  font-weight: normal;
+  color: #2c3e50;
+}
+
+/* Apply NaNMetrify Light to paragraphs */
+.cats-light {
+  font-family: 'NaNMetrify', sans-serif;
+  font-weight: 300; /* Use light weight */
+  font-size: 14px;
+  color: #2c3e50;
+  line-height: 1.5; /* Improve readability */
+}
+
+/* Apply NaNMetrify Italic to list items */
+.cats-li {
+  font-family: 'NaNMetrify', sans-serif;
+  font-style: normal; /* Use italic style */
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.static-text-container {
+  font-family: 'NaNMetrify', sans-serif;
+  font-size: 14px;
+  color: #2c3e50;
+  line-height: 1.5;
+}
+
+/* Change the main bar (track) color */
+.irs--shiny .irs-bar {
+    background-color: #C928B2;
+    border-color:#C928B2;
+}
+
+/* Change the handle (thumb) color */
+.irs--shiny .irs-handle {
+    background-color: #E83DF5; /* Orange handle */
+    border-color: #E83DF5;    /* Optional border */
+}
+
+/* Change the hover effect on the handle */
+.irs--shiny .irs-handle:hover {
+    background-color: #C928B2; /* Darker orange on hover */
+    border-color: #C928B2;    /* Match border with hover color */
+}
+
+/* Change the slider line (unselected range) color */
+.irs--shiny .irs-line {
+    background-color: #D3D3D3; /* Light gray for unselected range */
+    border-color: #D3D3D3;    /* Optional border color */
+}
+
+/* Change the grid (if visible) */
+.irs--shiny .irs-grid {
+    color: #888; /* Change the grid line and label color */
+}
+
+.irs--shiny .irs-single {
+    background-color: #C928B2; /* Blue background */
+    color: #FAE6FAe;             /* White text */
+    border-color: #C928B2;    /* Matching border color */
+}
+
+/* Use flexbox for horizontal alignment and vertical centering */
+.shiny-options-group {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    gap: 20px; /* Spacing between options */
+}
+
+/* Vertically align radio buttons with text */
+.shiny-options-group label {
+    display: flex;
+    align-items: center; /* Align the label text with the radio button */
+    gap: 5px; /* Space between the button and the text */
+}
+
+/* Optional: Style the radio buttons for consistency */
+input[type="radio"] {
+    margin: 0; /* Reset default margin */
+    vertical-align: middle; /* Align the radio button to the middle of the text */
+}
+
+/* Hide the default radio button */
+input[type="radio"] {
+    appearance: none; /* Remove default styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff; /* Set initial background */
+    border: 2px solid #ccc; /* Set border */
+    border-radius: 50%;     /* Make it circular */
+    width: 15px;            /* Set size */
+    height: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Style the selected radio button */
+input[type="radio"]:checked {
+    background-color: #C928B2; /* Green background for selected */
+    border-color: #C928B2;    /* Match border */
+}
+
+/* Add hover effect */
+input[type="radio"]:hover {
+    border-color: #C928B2; /* Blue border on hover */
+}
+
+/* Optional: Add focus outline */
+input[type="radio"]:focus {
+    outline: 2px solid #C928B2;
+}
+
+/* Style for the buttons */
+.neut-button {
+  background-color: #c928b2; /* Custom background color */
+  color: #FAE6FA; /* Custom text color */
+  font-family:'CatsHeadline', sans-serif;
+  font-weight: normal;
+  width: 100%;
+  padding: 10px 10px; /* Padding inside the button */
+  text-align: center;
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect */
+.neut-button:hover {
+  background-color: #FAE6FA; /* Darker color on hover */
+  color: #7A1B72; /* Keep the text color */
+}
+
+.neut-textbox {
+  font-family: 'NaNMetrify', sans-serif;
+  font-size: 14px;
+  color: #2c3e50;
+  width: 300px; /* Match button width */
+  padding: 10px; /* Match button padding */
+  text-align: center; /* Align text to center */
+  border-radius: 5px; /* Same rounded corners */
+  border: 1px solid #ddd; /* Optional: Add a subtle border */
+  background-color: #f9f9f9; /* Light background for readability */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+.custom-box-content {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: 'NaNMetrify', sans-serif;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Style the container for the verbatim text output */
+.custom-box-content pre {
+  font-family: 'NaNMetrify', sans-serif; /* Use the same font as cats-reg */
+  font-size: 14px;                      /* Match cats-reg font size */
+  color: #2c3e50;                       /* Match cats-reg color */
+  background-color: transparent;        /* Remove the default gray background */
+  border: none;                         /* Remove any borders */
+  white-space: pre-wrap;                /* Ensure long lines wrap */
+}
+
+
+/* Style for the buttons */
+.neutDownload-button {
+  background-color: #7E3BE7; /* Custom background color */
+  color: #FAE6FA; /* Custom text color */
+  font-family:'CatsHeadline', sans-serif;
+  font-weight: normal;
+  width: 100%;
+  padding: 10px 10px; /* Padding inside the button */
+  text-align: center;
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect */
+.neutDownload-button:hover {
+  background-color: #FAE6FA; /* Darker color on hover */
+  color: #7E3BE7; /* Keep the text color */
+}
+
+/* Styling for the Visit Link button */
+.neutLink-button {
+  display: inline-block;
+  background-color: #7E3BE7; /* Custom background color */
+  color: #FAE6FA; /* Custom text color */
+  font-family:'CatsHeadline', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  width: 100%;
+  padding: 10px 20px; /* Padding inside the button */
+  text-align: center;
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+  margin-top: 50px; /* Add space above the button */
+}
+
+/* Hover effect */
+.neutLink-button:hover {
+  background-color: #FAE6FA; /* Darker color on hover */
+  color: #7E3BE7; /* Keep the text color */
+}
+
+.total-plot-box {
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 15px;
+}
+
+#zoom-container {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 100%;
+}
+
+#zoom-img {
+  transition: transform 0.25s ease;
+  cursor: grab;
+  user-select: none;
+}
+
+
+
+
