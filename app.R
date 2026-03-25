@@ -10,7 +10,7 @@ library(sf)
 library(shinyBS)
 library(jsonlite)
 library(base64enc)
-library(ShinyEditor)
+library(shinyEditor)
 library(rmarkdown)
 library(AzureStor)
 library(latexpdf)
@@ -158,7 +158,7 @@ library(tinytex)
               
               # Text editor using TinyMCE
               h3("Edit Home Page Content"),
-              editor("editableHomeText"),
+              aceEditor("editableHomeText"),
               actionButton("saveHomeText", "Save and update Home Page Content", 
                            style = "margin: 10px; padding: 10px;"),
               
@@ -196,11 +196,11 @@ library(tinytex)
                      conditionalPanel(
                        condition = "output.showEditor == true",
                        h3("Update Top Text"),
-                       editor("editableText_top"),
+                       aceEditor("editableText_top"),
                        actionButton("saveText_top", "Save and update Top Text", style = "margin: 10px; padding: 10px;"),
                        
                        h3("Update Bottom Text"),
-                       editor("editableText_bottom"),
+                       aceEditor("editableText_bottom"),
                        actionButton("saveText_bottom", "Save and update Bottom Text", style = "margin: 10px; padding: 10px;"),
                        
                        h3("Update Table"),
@@ -303,7 +303,7 @@ library(tinytex)
                             conditionalPanel(
                               condition = "output.showEditor == true",
                               h3("Edit Top Text"),
-                              editor("editableText_neuteringTop"),
+                              aceEditor("editableText_neuteringTop"),
                               actionButton("saveText_neuteringTop", "Save and Update Text", 
                                            style = "margin: 10px; padding: 10px;")
                             )
@@ -398,7 +398,7 @@ library(tinytex)
           conditionalPanel(
             condition = "output.showEditor == true",
             h3("Edit Top Text"),
-            editor("editableText_mapTop"),
+            aceEditor("editableText_mapTop"),
             actionButton("saveText_mapTop", "Save and Update Text", 
                          style = "margin: 10px; padding: 10px;")
           )
